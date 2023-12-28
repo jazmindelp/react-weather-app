@@ -1,1 +1,35 @@
+.Weather {
+  background-color: #8eaccd;
+  font-family: "Poppins", sans-serif;
 
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.Weather .btn-light:hover {
+  background-color: #f9f3cc;
+}
+.Weather h1 {
+  margin-top: 16px;
+}
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+.Weather li {
+  list-style: none;
+  font-size: 14px;
+}
+
+.Weather .temperature {
+  font-size: 64px;
+  font-weight: 500;
+}
+.Weather .unit {
+  position: relative;
+  top: -22px;
+  margin-left: 5px;
+}
+.Weather img {
+  margin-right: 10px;
+}
