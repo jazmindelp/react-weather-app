@@ -5,7 +5,7 @@ import { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 export default function Weather(props) {
   let [weather, setWeather] = useState({ loading: true });
-  let [city, setCity] = useState("");
+  let [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
 
@@ -13,7 +13,7 @@ export default function Weather(props) {
       loading: false,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
-      icon: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
       city: response.data.city,
@@ -22,6 +22,7 @@ export default function Weather(props) {
   }
   function search() {
     const apiKey = "325bc6t05fe26b896fe3169ea4b9o059";
+
     let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(url).then(handleResponse);
   }
