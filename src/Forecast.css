@@ -1,9 +1,11 @@
 .Forecast {
   text-align: center;
 
+  width: fit-content !important;
+}
+.forecast-day-container {
   background-color: white;
-  max-width: fit-content;
-  padding: 8px;
+  padding: 8px 12px;
   border-radius: 6px;
 }
 .forecast-day {
