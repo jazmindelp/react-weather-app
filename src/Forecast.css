@@ -1,7 +1,5 @@
 .Forecast {
   text-align: center;
-
-  width: fit-content !important;
 }
 .forecast-day-container {
   background-color: white;

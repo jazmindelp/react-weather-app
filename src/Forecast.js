@@ -1,15 +1,16 @@
 import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.query]);
 
   if (loaded) {
-    console.log(forecast);
-    console.log(props.query);
     return (
       <div className="Forecast mx-auto">
         <div className="row ">
