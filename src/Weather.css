@@ -31,3 +31,6 @@
   top: -22px;
   margin-left: 5px;
 }
+.Weather strong {
+  font-weight: 500;
+}
