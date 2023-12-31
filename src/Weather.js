@@ -3,12 +3,11 @@ import axios from "axios";
 import { useState } from "react";
 
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 export default function Weather(props) {
   let [weather, setWeather] = useState({ loading: true });
   let [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeather({
       loading: false,
       temperature: response.data.temperature.current,
@@ -57,6 +56,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weather} />
+        <Forecast query={city} />
       </div>
     );
   }

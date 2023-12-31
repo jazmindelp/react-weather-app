@@ -1,0 +1,18 @@
+.Forecast {
+  text-align: center;
+
+  background-color: white;
+  max-width: fit-content;
+  padding: 8px;
+  border-radius: 6px;
+}
+.forecast-day {
+  font-size: 14px;
+  font-weight: 500;
+}
+.forecast-temp {
+  font-size: 15px;
+}
+.min-temp {
+  opacity: 0.75;
+}
